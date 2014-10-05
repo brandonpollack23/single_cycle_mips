@@ -45,7 +45,7 @@ begin
 		pc_add_b <= imm_30 when '1',
 					(others => '0') when others;
 					
-	address_adder: entity work.adder_gen --next address adder, takes into account possible branch from previous mux
+	address_adder: entity work.adder_gen(numeric_std) --next address adder, takes into account possible branch from previous mux
 	generic map
 	(
 		WIDTH => 30
